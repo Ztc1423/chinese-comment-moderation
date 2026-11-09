@@ -1,0 +1,6 @@
+/raw/
+/out/
+__pycache__/
+*.pyc
+.env
+~$*.docx

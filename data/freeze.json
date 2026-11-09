@@ -1,0 +1,173 @@
+{
+  "version": "M2-v1.0",
+  "freeze_date": "2026-11-09",
+  "source": "https://github.com/thu-coai/COLDataset/tree/a0c55a945497ab58e94aef491180e1cf88ffb864",
+  "source_sha256": {
+    "train.csv": "16ca7955bdcaf90f5d8ac39e51eb3eda15320caa1e730ed45cb5e8ca8cd0d5e8",
+    "dev.csv": "28e67a26815aa1852449ba06919e51c07060d146e2bd23101cc0137a0ff94b7c",
+    "test.csv": "b06d31481f0d558b6dc8140408938abe8dba8083cd9976b4ba8f5c837fbe78ed",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "scorer_and_splitter_sha256": "4e5427292a742d33a94d72478edea42c3ace2027a1ec4a871194062dbf9c6bc6",
+  "id_file_sha256": {
+    "development/train_ids.csv": "cde3cc4537a40b004b5c1aa62ac0f2fcc6bcb7b3b5104a7c3308779c2082459b",
+    "development/dev_ids.csv": "56ea260c1ca0559cf7cfd48d9937829146893fc090ffe8ff991bc746188cccb8",
+    "acceptance/test_ids.csv": "79bcaeeeb4858560bc4967520ddfe60eced60e7700a54d31c66c73d25b1e6333",
+    "acceptance/common100_ids.csv": "08d17bd7fcc0af55cd807f773c3cc23e4b4377e19ef6c9c3e7f12986baad27c5"
+  },
+  "raw": {
+    "train": {
+      "n": 25726,
+      "normal": 13003,
+      "offensive": 12723,
+      "avg_trimmed_chars": 47.89,
+      "topic": {
+        "race": 10698,
+        "region": 8449,
+        "gender": 6579
+      }
+    },
+    "dev": {
+      "n": 6431,
+      "normal": 3220,
+      "offensive": 3211,
+      "avg_trimmed_chars": 47.34,
+      "topic": {
+        "race": 2670,
+        "region": 2104,
+        "gender": 1657
+      }
+    },
+    "test": {
+      "n": 5323,
+      "normal": 3216,
+      "offensive": 2107,
+      "avg_trimmed_chars": 48.33,
+      "topic": {
+        "race": 1685,
+        "gender": 1551,
+        "region": 2087
+      }
+    }
+  },
+  "raw_total": {
+    "n": 37480,
+    "normal": 19439,
+    "offensive": 18041,
+    "avg_trimmed_chars": 47.86,
+    "topic": {
+      "race": 15053,
+      "region": 12640,
+      "gender": 9787
+    }
+  },
+  "retained": {
+    "development/train": {
+      "n": 25577,
+      "normal": 12968,
+      "offensive": 12609,
+      "avg_trimmed_chars": 47.81,
+      "topic": {
+        "race": 10669,
+        "region": 8338,
+        "gender": 6570
+      }
+    },
+    "development/dev": {
+      "n": 6415,
+      "normal": 3216,
+      "offensive": 3199,
+      "avg_trimmed_chars": 47.31,
+      "topic": {
+        "race": 2666,
+        "region": 2092,
+        "gender": 1657
+      }
+    },
+    "acceptance/test": {
+      "n": 5323,
+      "normal": 3216,
+      "offensive": 2107,
+      "avg_trimmed_chars": 48.33,
+      "topic": {
+        "race": 1685,
+        "gender": 1551,
+        "region": 2087
+      }
+    }
+  },
+  "dropped": {
+    "train": {
+      "cross_split": 69,
+      "conflicting_label": 26,
+      "within_split_repeat": 54
+    },
+    "dev": {
+      "cross_split": 15,
+      "within_split_repeat": 1
+    }
+  },
+  "raw_exact_overlap": {
+    "train_dev": 30,
+    "train_test": 39,
+    "dev_test": 15
+  },
+  "test_internal_repeats": 3,
+  "test_fine": {
+    "2": 1819,
+    "1": 288,
+    "3": 668,
+    "0": 2548
+  },
+  "test_by_topic": {
+    "gender": {
+      "normal": 873,
+      "offensive": 678
+    },
+    "race": {
+      "normal": 964,
+      "offensive": 721
+    },
+    "region": {
+      "normal": 1379,
+      "offensive": 708
+    }
+  },
+  "common100": {
+    "seed": 20261109,
+    "normal": 50,
+    "offensive": 50
+  },
+  "all_safe_reference": {
+    "n": 5323,
+    "macro_f1": 0.37662489752898465,
+    "accuracy": 0.6041705804997182,
+    "valid_rate": 1.0,
+    "offensive_recall": 0.0,
+    "normal_error_rate": 0.0,
+    "normal_explicit_fp_rate": 0.0,
+    "normal_invalid": 0,
+    "offensive_invalid": 0,
+    "anti_bias_n": 668,
+    "anti_bias_error_rate": 0.0,
+    "anti_bias_explicit_fp_rate": 0.0,
+    "anti_bias_invalid": 0,
+    "penalized_confusion": {
+      "tp": 0,
+      "tn": 3216,
+      "fp": 0,
+      "fn": 2107
+    }
+  },
+  "acceptance_thresholds": {
+    "macro_f1": 0.8,
+    "offensive_recall": 0.8,
+    "agent_macro_f1_gain_pp": 3,
+    "agent_antibias_error_drop_pp": 5
+  },
+  "implementation_revision": "r2",
+  "inherited_module_sha256": {
+    "prototype/label_map.py": "7cbfa194fe3c9e986b4e69764c997b58adcc186726fac65e7925fa4a12bb550e",
+    "prototype/metrics.py": "585e21f3ffd42ae15b1e4b220861e6422cce468e7b101956e0efbfa6fdc84086"
+  }
+}

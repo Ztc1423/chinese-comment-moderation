@@ -1,0 +1,5 @@
+/data/development/*_ids.csv text eol=lf
+/data/acceptance/*_ids.csv text eol=lf
+/src/m2.py text eol=lf
+/src/prototype/label_map.py text eol=lf
+/src/prototype/metrics.py text eol=lf
